@@ -1,4 +1,5 @@
 import sys, CurrentVehicle
+from gui.SystemMessages import pushMessage, SM_TYPE
 from CurrentVehicle import _CurrentVehicle, g_currentVehicle
 from gui.shared.gui_items.Vehicle import Vehicle
 
@@ -23,4 +24,6 @@ Vehicle.getState = lambda self: ('ready', 0)
 _CurrentVehicle.isUnsuitableToQueue = lambda self: False
 
 g_currentVehicle.onChanged()
-print "done"
+msg = "clientside restrictions removed // " + "\xEE\xE3\xF0\xE0\xED\xE8\xF7\xE5\xED\xE8\xFF\x20\xF1\xEE\x20\xF1\xF2\xEE\xF0\xEE\xED\xFB\x20\xEA\xEB\xE8\xE5\xED\xF2\xE0\x20\xF3\xE4\xE0\xEB\xE5\xED\xFB".decode('cp1251')
+
+pushMessage(msg, SM_TYPE.Warning)
