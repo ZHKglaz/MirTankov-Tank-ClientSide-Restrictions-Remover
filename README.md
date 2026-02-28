@@ -8,6 +8,7 @@ Simple script to reemove ClientSide Restriction text
 
 ===INSTALATION===
 
+
 1- Download Release
 
 2- Start WoT-Transmission ( WoT too )
